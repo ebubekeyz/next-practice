@@ -13,3 +13,6 @@ Choose Web application
 Add authorized redirect URI:
 
 npm install next-auth
+
+<!-- https://main.dwafzqlzr2x0s.amplifyapp.com -->
+
