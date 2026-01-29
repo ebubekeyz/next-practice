@@ -21,6 +21,8 @@ export default function Home(){
         <Link href="/login">Login</Link>
       </Button> */}
       {session ?  <>
+       <img src={session.user?.image || ""} alt={session.user?.name || "User"} width={80} height={80} />
+      <p>Signed in as {session.user?.name}</p>
         <p>Signed in as {session.user?.email}</p>
         <Button size="lg" variant="default" onClick={()=>signOut()}>Sign Out</Button>
       </> :  <Button size="lg" variant="default" onClick={()=>signIn()}>Sign In</Button>}
