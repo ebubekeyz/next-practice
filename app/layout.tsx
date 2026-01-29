@@ -1,5 +1,5 @@
-
-import type { Metadata } from "next";
+"use client";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "next-auth/react";
@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Job App",
-  description: "Built by Ebube",
-};
+// export const metadata: Metadata = {
+//   title: "Job App",
+//   description: "Built by Ebube",
+// };
 
 export default function RootLayout({
   children,
