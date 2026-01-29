@@ -12,6 +12,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 export default function Home(){
   const {data: session} = useSession()
 
+  console.log(session)
+
 
   return <section className="grid place-items-center h-screen items-center px-4">
     <div className="border grid gap-4 p-5 rounded text-center place-items-center shadow transition ">
@@ -22,6 +24,7 @@ export default function Home(){
       </Button> */}
       {session ?  <>
        <img src={session.user?.image || ""} alt={session.user?.name || "User"} width={80} height={80} />
+             <p>Signed in as {session.user?.id}</p>
       <p>Signed in as {session.user?.name}</p>
         <p>Signed in as {session.user?.email}</p>
         <Button size="lg" variant="default" onClick={()=>signOut()}>Sign Out</Button>
